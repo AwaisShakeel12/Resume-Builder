@@ -1,0 +1,68 @@
+{% load static %}
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/navbar1.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   
+  </head>
+<body>
+
+
+  
+  <nav class="navbar navbar-expand-lg shadow-lg boder-2">
+    <!-- <video class="background-video" autoplay loop muted type="video/mp4" src="../base/../../../static/video/bg_sky.mp4"></video> -->
+
+    <div class="container-fluid text-light">
+        <a style="color: white;" href="{% url 'resume_form' %}">
+            Awais Shakeel
+        </a>
+
+        <!-- Navbar Toggler Button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Items -->
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+
+              
+                <li class="nav-item ml-3">
+                    <a class="nav-link " aria-current="page" href="{% url 'aspremium' %}">
+                        ASPERMIUM
+                    </a>
+                </li>
+                <li class="nav-item ml-3">
+                    <a class="nav-link " aria-current="page" href="{% url 'blackedition'%}">
+                        Black Edition
+                    </a>
+                </li>
+                
+                <li class="nav-item ml-3">
+                    <a class="nav-link " aria-current="page" href="https://awaisshakeel12.pythonanywhere.com/">
+                        ABOUT US
+                    </a>
+                </li>
+
+
+
+            </ul>
+     
+       
+        </div>
+    </div>
+</nav>
+
+
+ 
+</body>
+</html>

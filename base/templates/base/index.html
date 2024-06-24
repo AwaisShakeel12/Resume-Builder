@@ -1,0 +1,274 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASLtdResume</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .form-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .left-column, .right-column {
+            flex: 0 0 50%;
+            max-width: 50%;
+            padding: 0 15px;
+        }
+        .form-group textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            color: gray;
+           
+        }
+        .form-control{
+            color: gray;
+            border-top-color: transparent;
+            border-left-color: transparent;
+            border-right-color: transparent;
+            border-bottom-color: gray;
+        }
+        .form-column {
+            padding: 0 15px;
+        }
+    
+        body{
+            background-color: blueviolet;
+        }
+
+
+        .main-form{
+            margin-top: 100px;
+            margin-bottom: 100px;
+            border-radius: 15px;
+            box-shadow: 0px 2px white;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid main-container">
+
+         
+
+   
+        <div class="container main-form">
+            <div style="text-align: center; display: flex; align-items: center; justify-content: center;"  >
+                <h1 style="border: 2px solid; border-bottom-left-radius: 15px;  border-bottom-right-radius: 15px;  background-color: aquamarine; color: white; width: fit-content; padding: 20px;">AS Resume Builder</h1>
+               </div>
+        
+            <form method="post">
+                {% csrf_token %}
+                <div class="form-container">
+                   
+
+                    <div class="left-column">
+                        <div class="form-group mt-5">
+                            {{ form.template_choice.label_tag }}
+                            {{ form.template_choice }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.firstname.label_tag }}
+                            {{ form.firstname }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.lastname.label_tag }}
+                            {{ form.lastname }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.email.label_tag }}
+                            {{ form.email }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.phone.label_tag }}
+                            {{ form.phone }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.address.label_tag }}
+                            {{ form.address }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.Headline.label_tag }}
+                            {{ form.Headline }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.aboutYou.label_tag }}
+                            {{ form.aboutYou }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.eduTitle1.label_tag }}
+                            {{ form.eduTitle1 }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.eduInstitute1.label_tag }}
+                            {{ form.eduInstitute1 }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.edu1Marks1.label_tag }}
+                            {{ form.edu1Marks1 }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.eduStartDate1.label_tag }}
+                            {{ form.eduStartDate1 }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.eduEndDate1.label_tag }}
+                            {{ form.eduEndDate1 }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.eduTitle2.label_tag }}
+                            {{ form.eduTitle2 }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.eduInstitute2.label_tag }}
+                            {{ form.eduInstitute2 }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.edu1Marks2.label_tag }}
+                            {{ form.edu1Marks2 }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.eduStartDate2.label_tag }}
+                            {{ form.eduStartDate2 }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.eduEndDate2.label_tag }}
+                            {{ form.eduEndDate2 }}
+                        </div>
+
+                        <div class="form-group">
+                            {{ form.eduTitle3.label_tag }}
+                            {{ form.eduTitle3 }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.eduInstitute3.label_tag }}
+                            {{ form.eduInstitute3 }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.edu1Marks3.label_tag }}
+                            {{ form.edu1Marks3 }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.eduStartDate3.label_tag }}
+                            {{ form.eduStartDate3 }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.eduEndDate3.label_tag }}
+                            {{ form.eduEndDate3 }}
+                        </div>
+
+
+                    </div>
+                    <div class="right-column">
+                        <br><br>
+                        <div class="form-group">
+                            {{ form.skil1.label_tag }}
+                            {{ form.skil1 }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.skil2.label_tag }}
+                            {{ form.skil2 }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.skil3.label_tag }}
+                            {{ form.skil3 }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.skil4.label_tag }}
+                            {{ form.skil4 }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.skil5.label_tag }}
+                            {{ form.skil5 }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.skil6.label_tag }}
+                            {{ form.skil6 }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.projectTitle1.label_tag }}
+                            {{ form.projectTitle1 }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.projectDescription1.label_tag }}
+                            {{ form.projectDescription1 }}
+                        </div>
+                    
+                        <div class="form-group">
+                            {{ form.projectTitle2.label_tag }}
+                            {{ form.projectTitle2 }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.projectDescription2.label_tag }}
+                            {{ form.projectDescription2 }}
+                        </div>
+    
+                        <div class="form-group">
+                            {{ form.experienceLevel.label_tag }}
+                            {{ form.experienceLevel }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.experienceTitle1.label_tag }}
+                            {{ form.experienceTitle1 }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.experienceCompany1.label_tag }}
+                            {{ form.experienceCompany1 }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.expStartDate1.label_tag }}
+                            {{ form.expStartDate1 }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.expEndDate1.label_tag }}
+                            {{ form.expEndDate1 }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.experienceTitle2.label_tag }}
+                            {{ form.experienceTitle2 }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.experienceCompany2.label_tag }}
+                            {{ form.experienceCompany2 }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.expStartDate2.label_tag }}
+                            {{ form.expStartDate2 }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.expEndDate2.label_tag }}
+                            {{ form.expEndDate2 }}
+                        </div>
+                        <div class="form-group">
+                           <ul>
+                            <li>Tips to make your resume awesome!</li>
+                            <li>Try to fill complete form</li>
+                            <li>Try to provide least 2 education fields</li>
+                            <li>Try to provide least 1 project field</li>
+                            <li>Try to provide least 1 experience field</li>
+                            <li>Fresh students should fill 3 Education fields </li>
+                            <li>You can Skip the fields (optional)</li>
+                           </ul>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+
+    </div>
+</body>
+</html>
+
+{% endblock%}

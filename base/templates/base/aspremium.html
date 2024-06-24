@@ -1,0 +1,179 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template2</title>
+    <style>
+
+ 
+
+        
+        p{
+            color: black;
+        }
+        li{
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
+  
+        p{
+           
+            padding-top: 5px;
+            padding-bottom: 0px;
+        }
+        span{
+            color: navy;
+            font-weight: bold;
+            padding-top: 5px;
+            font-size: 13px;
+        }
+    </style>
+
+</head>
+<body>
+    <div>
+        <!-- Left Column -->
+        <div >
+       
+            <h1 style=" color: white; border: 2px solid navy; background-color: navy; padding-bottom: 0px;padding-top: 5px; align-items: center; text-align: center; ">{{ resume.firstname }} {% if resume.lastname %}{{ resume.lastname }}{% endif %}</h1>
+            <h2 style=" background-color: #f0f0f0; color: navy; font-weight: bold; border-top-left-radius: 50%; padding-bottom: 0px;padding-top: 5px; text-align: center; ">{{ resume.Headline }}</h2>
+         
+            {% if resume.email %}<p style=" background-color: #f0f0f0; text-align: center;  margin-bottom: 5px; font-family: Arial, Helvetica, sans-serif; padding-bottom: 5px;padding-top: 5px; padding-left: 5px; ">{{ resume.email }} | {% if resume.phone %}{{ resume.phone }}{% endif %} |  {% if resume.address %}{{ resume.address }}{% endif %} </p> {% endif %}
+         
+            <p style="border-radius: 15px;text-align: center; background-color: navy; color: white; width: 300px; margin-top: 10px; padding-bottom: 0px;padding-top: 5px; ">Career Summary</p>
+            <p >{{ resume.aboutYou }}</p>
+            
+        
+
+            <p style="padding-bottom: 0px;padding-top: 5px; text-align: center; border-radius: 15px; background-color: navy; color: white; width: 300px;" >Skills</p>
+            <ul style=" padding-left: 0px; ">
+                {% if resume.skil1 %}<li>{{ resume.skil1 }}</li>{% endif %}
+                {% if resume.skil2 %}<li>{{ resume.skil2 }}</li>{% endif %}
+                {% if resume.skil3 %}<li>{{ resume.skil3 }}</li>{% endif %}
+                {% if resume.skil4 %}<li>{{ resume.skil4 }}</li>{% endif %}
+                {% if resume.skil5 %}<li>{{ resume.skil5 }}</li>{% endif %}
+                {% if resume.skil6 %}<li>{{ resume.skil6 }}</li>{% endif %}
+            </ul>
+    
+        </div>
+
+        <!-- Right Column -->
+       
+        <div >
+            {% if resume.eduTitle1 %}
+            <div  >
+            
+            <p style="padding-bottom: 0px;padding-top: 5px;text-align: center; border-radius: 15px; background-color: navy; color: white; width: 300px; " >Education</p>
+      
+                <div>
+                    {% if resume.eduInstitute1 %}
+                    <span style=" padding-bottom: 0'px;padding-top: 0px;">{{ resume.eduInstitute1 }}</span>
+                    {% endif %}
+                    {% if resume.eduStartDate1 %}
+                    <p style="padding-bottom: -2px; padding-top: -2px;" >{{ resume.eduTitle1 }} | {{ resume.eduStartDate1 }}  {% if resume.eduEndDate1 %} - {{ resume.eduEndDate1 }} {% endif %}</p>
+                    {% endif %}
+                    {% if resume.edu1Marks1 %}
+                    <p style="padding-bottom: -2px; padding-top: -2px;" >CGPA: {{ resume.edu1Marks1 }}</p>
+                    {% endif %}
+                </div>
+            </div>    
+            {% endif %}
+
+
+            {% if resume.eduTitle2 %}
+            <div>
+                {% if resume.eduInstitute2 %}
+                <span >{{ resume.eduInstitute2 }}</span>
+                {% endif %}
+                {% if resume.eduStartDate2 %}
+                <p style="padding-bottom: -2px; padding-top: -2px;">{{ resume.eduTitle2 }} | {{ resume.eduStartDate2 }} {% if resume.eduEndDate2 %} - {{ resume.eduEndDate2 }} {% endif %}</p>
+                {% endif %}
+                {% if resume.edu1Marks1 %}
+                <p style="padding-bottom: -2px; padding-top: -2px;">Marks: {{ resume.edu1Marks2 }}</p>
+                {% endif %}
+              
+            </div>
+            
+        {% endif %}
+
+        {% if resume.eduTitle3 %}
+        <div>
+            {% if resume.eduInstitute2 %}
+            
+            <span >{{ resume.eduInstitute3 }}</span>
+            {% endif %}
+            {% if resume.eduStartDate3 %}
+
+            <p style="padding-bottom: -2px; padding-top: -2px;">{{ resume.eduTitle3 }} | {{ resume.eduStartDate3 }} {% if resume.eduEndDate3 %} - {{ resume.eduEndDate3 }} {% endif %}</p>
+            {% endif %}
+            
+            {% if resume.edu1Marks3 %}
+            <p style="padding-bottom: -2px; padding-top: -2px;">Marks : {{ resume.edu1Marks3 }}</p>
+            {% endif %}
+        
+        </div>
+        
+    {% endif %}
+
+
+   
+  
+    
+   
+            {% if resume.projectTitle1 %}
+        
+           
+            <p style="text-align: center; padding-bottom: 0px;padding-top: 5px; border-radius: 15px; background-color: navy; color: white; width: 300px;">Project / Achivements</p>
+
+            
+                <div >
+                    
+                    <span style="padding-bottom: 0px;padding-top: 0px;" >{{ resume.projectTitle1 }}</span>
+                    {% if resume.projectDescription1 %}
+                    <p style="padding-bottom: -2px; padding-top: -2px;">{{ resume.projectDescription1 }}</p>
+                    {% endif %}
+                </div>
+                
+            {% endif %}
+
+            {% if resume.projectTitle2 %}
+                <div>
+                   
+                    <span  style="padding-bottom: 0px;padding-top: 0px;" >{{ resume.projectTitle2 }}</span>
+                    {% if resume.projectDescription2 %}
+                   
+                    <p style="padding-bottom: -2px; padding-top: -2px;">{{ resume.projectDescription2 }}</p>
+                  {% endif %}
+                </div>
+                
+            {% endif %}
+
+            
+            <div >
+            
+            <p style="text-align: center; padding-bottom: 0px;padding-top: 5px; border-radius: 15px; background-color: navy; color: white; width: 300px; " >Experience:  {{ resume.experienceLevel }}(Year)</p>
+
+                
+                {% if resume.experienceTitle1 %}
+                    <span style=" padding-bottom: 0px;padding-top: 0px;">{{ resume.experienceTitle1 }}</span>
+                    {% if resume.experienceCompany1 %}<p style="padding-top: -2px; padding-bottom: -2px;"  >Company: {{ resume.experienceCompany1 }}</p>{% endif %}
+                    <p style="padding-bottom: -2px; padding-top: -2px;"> {% if resume.expStartDate1 %}{{ resume.expStartDate1 }}{% endif %} {% if resume.expEndDate1 %} - {{ resume.expEndDate1 }}{% endif %}</p> 
+                {% endif %}
+             
+                {% if resume.experienceTitle2 %}
+                    <span style="padding-bottom: 0px;padding-top: 0px;">{{ resume.experienceTitle2 }}</span>
+                    <p style="padding-bottom: -2px; padding-top: -2px;">Company:  {% if resume.experienceCompany2 %}{{ resume.experienceCompany2 }}{% endif %}</p>
+                    
+                    <p style="padding-bottom: -2px; padding-top: -2px;">{% if resume.expStartDate2 %}{{ resume.expStartDate2 }}{% endif %}  {% if resume.expEndDate2 %} - {{ resume.expEndDate2 }}{% endif %} </p>
+                    
+                    
+                {% endif %}
+            </div>
+ 
+        </div>
+    </div>
+</body>
+</html>
